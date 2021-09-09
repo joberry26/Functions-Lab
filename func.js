@@ -285,7 +285,6 @@ function bathroom() {
 function pond() {
   let realDuck = "fluffy";
 }
-
 /*
   There are 4 variables above: duck, rubberDuck, sailorDuck and realDuck.
   All within different scopes.

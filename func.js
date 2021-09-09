@@ -184,8 +184,17 @@ let loser = 'Glimmer'
   The function should loop over the array of contestant names. If the loser string appears in the 
   array, splice it out. Return the new contestants array.
 */
+function theEliminator(x, y){
+  for (let i = 0; i < x.length; i++) {
+    if (x[i] === y) {
+      x.splice(i, 1, );
+      
+      return x;
+    }
+  }
+}
 
-//CODE HERE
+theEliminator(contestants, loser);
 
 
 ////////////////// PROBLEM 11 ////////////////////
@@ -195,8 +204,13 @@ let sampleString = "Hi, my name is Kylo."
    string, in entirely uppercase characters.
 */
 
-//CODE HERE
+function upperCase(x) {
+  x = x.toUpperCase();
+console.log(x);
+ 
+}
 
+upperCase(sampleString);
 
 ////////////////// PROBLEM 12 ////////////////////
 /*
@@ -208,8 +222,12 @@ let sampleString = "Hi, my name is Kylo."
   amount of gold you are willing to spend.
 */
 
-//CODE HERE
+function tastyFrogs (money){
+  let frog = 3;
+  return `You were able to purchase ${money / frog} frogs!`
+}
 
+let totalFrogs = tastyFrogs(24)
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -220,7 +238,14 @@ let sampleString = "Hi, my name is Kylo."
     value to a variable called `totalFrogs2`.
 */
 
-//CODE HERE
+function tastyFrogs (money){
+  let frog = 3;
+  return `You were able to purchase ${Math.round(money / frog)} frogs!`
+  
+}
+
+let totalFrogs = tastyFrogs(8)
+console.log(totalFrogs);
 
 
 ////////////////// PROBLEM 14 ////////////////////
@@ -232,7 +257,18 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
     and set it equal to your function invoked. Use the sample array to test this function.
 */
 
-//CODE HERE
+function order (x){
+  let isAsc = true;
+  for (let i = 0; i < x.length; i++) {
+    if (x[i] > x[i + 1]){
+      isAsc = false;
+    } 
+  }
+  return isAsc;
+}
+
+order(sampleArray);
+
 
 
 ////////////////// PROBLEM 15 ////////////////////
@@ -257,13 +293,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = [duck]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = [duck, rubberDuck]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = [sailorDuck, rubberDuck, duck]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = [realDuck, duck]
